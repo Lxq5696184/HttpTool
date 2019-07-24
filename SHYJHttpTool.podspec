@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint HttpTool.podspec' to ensure this is a
+#  Be sure to run `pod spec lint SHYJHttpTool.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -15,9 +15,9 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "HttpTool"
+  spec.name         = "SHYJHttpTool"
   spec.version      = "1.0.0"
-  spec.summary      = "A Network request file for iOS."
+  spec.summary      = "Encapsulation of a network request."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = "Network request based on AFNetwork."
 
-  spec.homepage     = "https://github.com/Lxq5696184/HttpTool"
+  spec.homepage     = "https://github.com/Lxq5696184/SHYJHttpTool"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -78,7 +78,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/Lxq5696184/HttpTool.git", :tag => spec.version }
+  spec.source       = { :git => "https://github.com/Lxq5696184/SHYJHttpTool.git", :tag => spec.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,7 +89,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "HttpTool", "HttpTool/**/*.{h,m}"
+  spec.source_files  = "SHYJHttpTool", "SHYJHttpTool/**/*.{h,m}"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"

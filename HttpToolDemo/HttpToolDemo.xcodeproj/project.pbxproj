@@ -30,8 +30,8 @@
 		20512CE922E7E8D800B85947 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 20512CDF22E7E8D800B85947 /* UIWebView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		20512CEA22E7E8D800B85947 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20512CE022E7E8D800B85947 /* AFAutoPurgingImageCache.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		20512CEB22E7E8D800B85947 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 20512CE222E7E8D800B85947 /* AFImageDownloader.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		20512CF522E7EA6500B85947 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 20512CF422E7EA6500B85947 /* HttpTool.m */; };
-		20512CFA22E801D300B85947 /* HttpTool+RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20512CF922E801D300B85947 /* HttpTool+RequestManager.m */; };
+		20512CF522E7EA6500B85947 /* SHYJHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 20512CF422E7EA6500B85947 /* SHYJHttpTool.m */; };
+		20512CFA22E801D300B85947 /* SHYJHttpTool+RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20512CF922E801D300B85947 /* SHYJHttpTool+RequestManager.m */; };
 		20512CFD22E8056F00B85947 /* HTCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20512CFC22E8056F00B85947 /* HTCacheManager.m */; };
 		20512D0022E8059200B85947 /* HTMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20512CFF22E8059200B85947 /* HTMemoryCache.m */; };
 		20512D0322E805A500B85947 /* HTDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20512D0222E805A500B85947 /* HTDiskCache.m */; };
@@ -109,10 +109,10 @@
 		20512CED22E7E96500B85947 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		20512CEF22E7E97300B85947 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		20512CF122E7E97B00B85947 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		20512CF322E7EA6500B85947 /* HttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
-		20512CF422E7EA6500B85947 /* HttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
-		20512CF822E801D300B85947 /* HttpTool+RequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HttpTool+RequestManager.h"; sourceTree = "<group>"; };
-		20512CF922E801D300B85947 /* HttpTool+RequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HttpTool+RequestManager.m"; sourceTree = "<group>"; };
+		20512CF322E7EA6500B85947 /* SHYJHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHYJHttpTool.h; sourceTree = "<group>"; };
+		20512CF422E7EA6500B85947 /* SHYJHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHYJHttpTool.m; sourceTree = "<group>"; };
+		20512CF822E801D300B85947 /* SHYJHttpTool+RequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SHYJHttpTool+RequestManager.h"; sourceTree = "<group>"; };
+		20512CF922E801D300B85947 /* SHYJHttpTool+RequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SHYJHttpTool+RequestManager.m"; sourceTree = "<group>"; };
 		20512CFB22E8056F00B85947 /* HTCacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTCacheManager.h; sourceTree = "<group>"; };
 		20512CFC22E8056F00B85947 /* HTCacheManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTCacheManager.m; sourceTree = "<group>"; };
 		20512CFE22E8059200B85947 /* HTMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMemoryCache.h; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 		20512C8422E7E71500B85947 /* HttpToolDemo */ = {
 			isa = PBXGroup;
 			children = (
-				20512CB722E7E86E00B85947 /* HttpTool */,
+				20512CB722E7E86E00B85947 /* SHYJHttpTool */,
 				20512C8522E7E71500B85947 /* AppDelegate.h */,
 				20512C8622E7E71500B85947 /* AppDelegate.m */,
 				20512C8822E7E71500B85947 /* ViewController.h */,
@@ -204,16 +204,16 @@
 			path = HttpToolDemoUITests;
 			sourceTree = "<group>";
 		};
-		20512CB722E7E86E00B85947 /* HttpTool */ = {
+		20512CB722E7E86E00B85947 /* SHYJHttpTool */ = {
 			isa = PBXGroup;
 			children = (
-				20512CF322E7EA6500B85947 /* HttpTool.h */,
-				20512CF422E7EA6500B85947 /* HttpTool.m */,
+				20512CF322E7EA6500B85947 /* SHYJHttpTool.h */,
+				20512CF422E7EA6500B85947 /* SHYJHttpTool.m */,
 				20512CF722E8010600B85947 /* RequestManager */,
 				20512CF622E8010200B85947 /* Cache */,
 				20512CB822E7E88300B85947 /* AFNetworking */,
 			);
-			path = HttpTool;
+			path = SHYJHttpTool;
 			sourceTree = "<group>";
 		};
 		20512CB822E7E88300B85947 /* AFNetworking */ = {
@@ -301,8 +301,8 @@
 		20512CF722E8010600B85947 /* RequestManager */ = {
 			isa = PBXGroup;
 			children = (
-				20512CF822E801D300B85947 /* HttpTool+RequestManager.h */,
-				20512CF922E801D300B85947 /* HttpTool+RequestManager.m */,
+				20512CF822E801D300B85947 /* SHYJHttpTool+RequestManager.h */,
+				20512CF922E801D300B85947 /* SHYJHttpTool+RequestManager.m */,
 			);
 			path = RequestManager;
 			sourceTree = "<group>";
@@ -450,7 +450,7 @@
 				20512CE322E7E8D800B85947 /* UIProgressView+AFNetworking.m in Sources */,
 				20512D0622E805B600B85947 /* HTLRUManager.m in Sources */,
 				20512CCA22E7E8D000B85947 /* AFURLSessionManager.m in Sources */,
-				20512CF522E7EA6500B85947 /* HttpTool.m in Sources */,
+				20512CF522E7EA6500B85947 /* SHYJHttpTool.m in Sources */,
 				20512D0022E8059200B85947 /* HTMemoryCache.m in Sources */,
 				20512CEB22E7E8D800B85947 /* AFImageDownloader.m in Sources */,
 				20512CC822E7E8D000B85947 /* AFURLResponseSerialization.m in Sources */,
@@ -458,7 +458,7 @@
 				20512D0322E805A500B85947 /* HTDiskCache.m in Sources */,
 				20512CE522E7E8D800B85947 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				20512CCB22E7E8D000B85947 /* AFURLRequestSerialization.m in Sources */,
-				20512CFA22E801D300B85947 /* HttpTool+RequestManager.m in Sources */,
+				20512CFA22E801D300B85947 /* SHYJHttpTool+RequestManager.m in Sources */,
 				20512CCC22E7E8D000B85947 /* AFNetworkReachabilityManager.m in Sources */,
 				20512C8722E7E71500B85947 /* AppDelegate.m in Sources */,
 			);

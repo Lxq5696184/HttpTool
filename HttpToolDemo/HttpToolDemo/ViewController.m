@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "HttpTool.h"
+#import "SHYJHttpTool.h"
 @interface ViewController ()
 
 @end
@@ -21,15 +21,15 @@
 }
 - (void)HttpRequest {
     NSString * url = @"http://news-at.zhihu.com/api/4/news/latest";
-    [HttpTool configHttpHeader:@{}];
-    [HttpTool getWithUrl:url refreshRequest:NO cache:NO params:@{} progressBlock:^(int64_t bytesRead, int64_t totalBytes) {
+    [SHYJHttpTool configHttpHeader:@{}];
+    [SHYJHttpTool getWithUrl:url refreshRequest:NO cache:NO params:@{} progressBlock:^(int64_t bytesRead, int64_t totalBytes) {
         NSLog(@"%lld -- %lld",bytesRead,totalBytes);
     } successBlock:^(id  _Nonnull response) {
         NSLog(@"成功 --- %@",response);
     } failBlock:^(NSError * _Nonnull error) {
         NSLog(@"失败 --- %@",error);
     }];
-    NSLog(@"size is %lu",[HttpTool totalCacheSize]);
+    NSLog(@"size is %lu",[SHYJHttpTool totalCacheSize]);
 }
 
 @end

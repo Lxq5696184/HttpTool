@@ -88,7 +88,7 @@ typedef HTDownloadProgress HTGetProgress;
 typedef HTDownloadProgress HTPostProgress;
 typedef HTFailBlock        HTDownloadFailBlock;
 
-@interface HttpTool : NSObject
+@interface SHYJHttpTool : NSObject
 /**
  *正在运行的网络任务
  *
@@ -163,7 +163,7 @@ typedef HTFailBlock        HTDownloadFailBlock;
  *  @param url              请求路径
  *  @param cache            是否缓存
  *  @param refresh          解释同上
- *  @param jsonStr          json参数
+ *  @param params           参数
  *  @param progressBlock    进度回调
  *  @param successBlock     成功回调
  *  @param failBlock        失败回调
@@ -238,7 +238,7 @@ typedef HTFailBlock        HTDownloadFailBlock;
                          successBlock:(HTDownloadSuccessBlock)successBlock
                             failBlock:(HTDownloadFailBlock)failBlock;
 @end
-@interface HttpTool (cache)
+@interface SHYJHttpTool (cache)
 /**
  * 获取缓存目录路径
  *

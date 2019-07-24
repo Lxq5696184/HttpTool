@@ -6,11 +6,11 @@
 //  Copyright © 2019 jieyi. All rights reserved.
 //
 
-#import "HttpTool.h"
+#import "SHYJHttpTool.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HttpTool (RequestManager)
+@interface SHYJHttpTool (RequestManager)
 /**
  *  判断网络请求池中d是否有相同的请求
  *

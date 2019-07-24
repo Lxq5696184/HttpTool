@@ -6,7 +6,7 @@
 //  Copyright © 2019 jieyi. All rights reserved.
 //
 
-#import "HttpTool+RequestManager.h"
+#import "SHYJHttpTool+RequestManager.h"
 @interface NSURLRequest (decide)
 
 //判断是否是同一个请求(依据是请求的url和参数是否相同)
@@ -26,7 +26,7 @@
 }
 @end
 
-@implementation HttpTool (RequestManager)
+@implementation SHYJHttpTool (RequestManager)
 + (BOOL)haveSameRequestInTasksPool:(HTURLSessionTask *)task {
     __block BOOL isSame = NO;
     [[self currentRunningTasks] enumerateObjectsUsingBlock:^(HTURLSessionTask * obj, NSUInteger idx, BOOL * _Nonnull stop) {

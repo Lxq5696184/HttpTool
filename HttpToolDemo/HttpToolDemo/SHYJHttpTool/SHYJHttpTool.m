@@ -6,10 +6,10 @@
 //  Copyright © 2019 jieyi. All rights reserved.
 //
 
-#import "HttpTool.h"
+#import "SHYJHttpTool.h"
 #import "AFNetworking.h"
 #import "AFNetworkActivityIndicatorManager.h"
-#import "HttpTool+RequestManager.h"
+#import "SHYJHttpTool+RequestManager.h"
 #import "HTCacheManager.h"
 #define HT_ERROR_IMFORMATION @"网络出现错误，请检查网络连接"
 #define HT_ERROR [NSError errorWithDomain:@"com.hyq.YQNetworking.ErrorDomain" code:-999 userInfo:@{ NSLocalizedDescriptionKey:HT_ERROR_IMFORMATION}]
@@ -19,7 +19,7 @@ static NSDictionary * headers;
 static HttpToolNetworkStatus networkStatus;
 static NSTimeInterval requestTimeout = 20.f;
 
-@implementation HttpTool
+@implementation SHYJHttpTool
 #pragma mark - manager
 + (AFHTTPSessionManager *)manager {
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
@@ -466,7 +466,7 @@ static NSTimeInterval requestTimeout = 20.f;
 }
 @end
 
-@implementation HttpTool (cache)
+@implementation SHYJHttpTool (cache)
 
 +(NSUInteger)totalCacheSize {
     return [[HTCacheManager shareManager] totalCacheSize];
