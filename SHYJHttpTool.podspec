@@ -17,14 +17,14 @@ Pod::Spec.new do |spec|
 
   spec.name         = "SHYJHttpTool"
   spec.version      = "1.0.0"
-  spec.summary      = "Encapsulation of a network request."
+  spec.summary      = "Network request based on AFNetwork."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = "Network request based on AFNetwork."
+  spec.description  = "Network request based on AFNetwork for iOS."
 
   spec.homepage     = "https://github.com/Lxq5696184/SHYJHttpTool"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -63,7 +63,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.platform     = :ios
-  spec.platform     = :ios, "8.0"
+  spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
